@@ -1,0 +1,17 @@
+### SIGNUP
+POST http://localhost:5000/auth/signup
+Content-Type: application/json
+
+{
+    "userName":"varundalal2",
+    "email": "varun2@gmail.com",
+    "password":"xyzabcasd"
+}
+### LOGIN
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "userName":"varundalal",
+    "password":"xyzabcasd"
+}
