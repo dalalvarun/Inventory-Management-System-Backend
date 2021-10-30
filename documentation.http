@@ -3,8 +3,8 @@ POST http://localhost:5000/auth/signup
 Content-Type: application/json
 
 {
-    "userName":"varundalal2",
-    "email": "varun2@gmail.com",
+    "userName":"varundalal3",
+    "email": "varunasdasd@gmail.com",
     "password":"xyzabcasd"
 }
 ### LOGIN
@@ -12,6 +12,59 @@ POST http://localhost:5000/auth/login
 Content-Type: application/json
 
 {
-    "userName":"varundalal",
+    "userName":"varundalal3",
     "password":"xyzabcasd"
 }
+### CHECK TOKEN
+POST http://localhost:5000/checkToken
+Content-Type: application/json
+
+{
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InZhcnVuZGFsYWwzIiwiZW1haWwiOiJ2YXJ1bjNAZ21haWwuY29tIiwiaWF0IjoxNjM0NDYwMTY4LCJleHAiOjE2MzQ2MzI5Njh9.-I7ZsDEkYNElDoxtssnl-SrEDPbIFwCb4yOQbcnZrbk"
+}
+### ADD INVENTORY
+POST http://localhost:5000/inventory/add
+Content-Type: application/json
+
+{
+    "name":"Keyb",
+    "quantity":5,
+    "status":"DEFECTIVE"
+}
+### GET INVENTORY
+GET http://localhost:5000/inventory/get
+Content-Type: application/json
+
+### GET INVENTORY
+POST http://localhost:5000/inventory/getByID
+Content-Type: application/json
+{
+    "id":""
+}
+
+### GET STATUS
+GET http://localhost:5000/status/
+Content-Type: application/json
+
+
+### ADD DEFECTS
+POST http://localhost:5000/defect/add
+Content-Type: application/json
+
+{
+    "id":"6172acd5a7b2557de47f9e05",
+    "quantity":1
+}
+### ADD TRANSACTION
+POST http://localhost:5000/transaction/add
+Content-Type: application/json
+
+{
+    "inventory":"617a9d28da8038d20201b3fb",
+    "assignedQty":1,
+    "assignedTo":"XYZ"
+}
+
+### GET TRANSACTIONS
+GET http://localhost:5000/transaction/all
+Content-Type: application/json
